@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/anime_logo" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEmail"
+        style="@style/parent"
+        android:layout_marginTop="@dimen/loginViewsMargin">
+
+
+        <EditText
+            android:id="@+id/et_username"
+            style="@style/modifiedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:hint="@string/login_email_hint"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textSize="30dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPassword"
+        style="@style/parent">
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/modifiedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/login_password_hint"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textSize="30dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/btn_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_background"
+        android:text="LOGIN" />
+
+
+</LinearLayout>
