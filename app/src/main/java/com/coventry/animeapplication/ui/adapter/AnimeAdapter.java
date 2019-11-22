@@ -18,7 +18,7 @@ import java.util.List;
 public class AnimeAdapter extends RecyclerView.Adapter<AnimeAdapter.myHolder> {
 
 
-    List<AnimeCharacters> charactersList;
+       List<AnimeCharacters> charactersList;
 
     public AnimeAdapter(List<AnimeCharacters> characters) {
         this.charactersList = characters;
@@ -69,25 +69,25 @@ public class AnimeAdapter extends RecyclerView.Adapter<AnimeAdapter.myHolder> {
         return charactersList.size();
     }
 
-    public class myHolder extends RecyclerView.ViewHolder {
+public class myHolder extends RecyclerView.ViewHolder {
 
-        TextView name,age,address,gender;
-        ImageView image;
-        Button delete;
+    TextView name,age,address,gender;
+    ImageView image;
+    Button delete;
 
-        public myHolder(@NonNull View itemView) {
+    public myHolder(@NonNull View itemView) {
 
-            super(itemView);
-            name=itemView.findViewById(R.id.text_name);
-            age=itemView.findViewById(R.id.text_age);
-            address=itemView.findViewById(R.id.text_address);
-            gender=itemView.findViewById(R.id.text_gender);
-            image=itemView.findViewById(R.id.imageView);
-            delete=itemView.findViewById(R.id.btn_delete);
+        super(itemView);
+        name=itemView.findViewById(R.id.text_name);
+        age=itemView.findViewById(R.id.text_age);
+        address=itemView.findViewById(R.id.text_address);
+        gender=itemView.findViewById(R.id.text_gender);
+        image=itemView.findViewById(R.id.imageView);
+        delete=itemView.findViewById(R.id.btn_delete);
 
 
-
-        }
 
     }
+
+}
 }

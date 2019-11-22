@@ -28,20 +28,35 @@ public class AnimeLogin extends AppCompatActivity {
                 uusername = username.getText().toString();
                 upassword = password.getText().toString();
 
+                if (!uusername.isEmpty() && !upassword.isEmpty()) {
+                    if (uusername.equals("naruto") && upassword.equals("sasuke")) {
+                        Intent intent = new Intent(AnimeLogin.this, MainActivity.class);
+                        startActivity(intent);
+                        Toast.makeText(AnimeLogin.this, "Login Success", Toast.LENGTH_SHORT).show();
+                    }
 
-              if (uusername.equals("naruto") && upassword.equals("sasuke")) {
-                    Intent intent = new Intent(AnimeLogin.this, MainActivity.class);
-                    startActivity(intent);
                 } else {
-                    Toast.makeText(AnimeLogin.this, "username or password incoorect",
-                            Toast.LENGTH_SHORT).show();
-                }
+                    if (uusername.isEmpty()) {
+                        username.setError("Enter User Name");
+                        Toast.makeText(AnimeLogin.this, "Either username or password is incorrect",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                    if (upassword.isEmpty()) {
+                        password.setError("Enter Password");
+                        Toast.makeText(AnimeLogin.this, "Either username or password is incorrect",
+                                Toast.LENGTH_SHORT).show();
+                    }
 
+                }
             }
 
-        });
+            });
+
 
     }
-}
+
+    }
+
+
 
 
